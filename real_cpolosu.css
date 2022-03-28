@@ -1,1 +1,537 @@
+/*Everyone knows this*/
+:root{
+    --ver1light: url(https://cdn.discordapp.com/attachments/837694478448984124/858575698398412830/CPOLHPBAR.png);
+    --ver1dark: url(https://cdn.discordapp.com/attachments/837694478448984124/858575773454696468/CPOLHPBARDARK.png);
+    --ver2light: url(https://cdn.discordapp.com/attachments/837694478448984124/858998038093365278/when_the_scorebar.png);
+    --ver2dark: url(https://cdn.discordapp.com/attachments/957228628461125652/957610091538956338/unknown.png);
+}
+
+* {
+    font-family: gamefont,JP;
+}
+
+@font-face {
+    font-family: "when the cpol font goes brrr"; /*Blyat drugs in code lmfao*/
+    src: url(https://db.onlinewebfonts.com/t/9d2765d319fd0c5f9c9e6000c12de92b.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: gamefont;
+    src: url(https://www.dl.dropboxusercontent.com/s/679aveh3vy5r0cl/Aller.woff2?dl=0);
+}
+
+@font-face {
+    font-family: JP;
+    src: url(https://www.dl.dropboxusercontent.com/s/qw4mgkgoeqlx54x/MotoyaLMaru-W3-90ms-RKSJ-H.ttf?dl=0);
+}
+/*Menu*/
+#aHolder,
+#timerIcon,
+#curGameInfo,
+#tlInfHold,
+#newsHolder,
+#merchHolder,
+#mainLogo,
+#seasonLabel,
+#termsInfo,
+#rankedSoonTm,
+#headerRight,
+.verticalSeparator,
+#menuRnkDisp,
+#faceItIconM,
+#loadEditrBtn,
+#infoHolder,
+#voiceDisplay {
+  display: none !important;
+}
+/*Menu*/
+#instructionHolder {
+    background-image: url(https://cdn.discordapp.com/attachments/925735566727868476/958007866025967676/y7ZNW3c.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#menuItemContainer {
+    flex-direction: row;
+    width: 300px;
+    background-color: transparent;
+    position: fixed !important;
+    left: unset;
+    bottom: unset;
+    right: 20px;
+    top: 60px;
+}
+.menBtnIcn {
+    font-size: 30px !important;
+    color: #fff !important;
+    transition: .4s;
+}
+.menuItemTitle {
+    display: none;
+}
+#signedInHeaderBar::after {
+    content: 'nekodex - circles!';
+    color: #fff;
+    font-size: 25px;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    border-bottom: 0.5px solid rgba(225,225,225,.5);
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+#signedInHeaderBar::before {
+    content: 'Now PLaying';
+    color: #fff;
+    font-size: 18px;
+    width: 20px;
+    position: fixed;
+    right: 280px;
+    top: 7px;
+    
+}
+/*Profile*/
+.headerBar {
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 10px;
+}
+#menuMiniProfilePic {
+    border-radius: 0;
+    content: url(https://cdn.discordapp.com/attachments/837695235231711252/957242498361724948/image_12.png);
+    width: 120px;
+    height: 120px;
+}
+#menuAccountUsername {
+    vertical-align: top;
+    font-size: 35px;
+}
+.krInfo {
+    display: block;
+    left: 150px;
+    font-size: 17px;
+    position: fixed;
+    top: 64px;
+}
+#menuKRCount span {
+    color: #fff !important;
+}
+.mainJunkInfo {
+    display: block;
+    left: 150px;
+    font-size: 17px;
+    position: fixed;
+    top: 90px;
+}
+#menuJNKCount span {
+    display: none !important;
+}
+#menuJNKCount::after {
+    content: 'Junk';
+    margin-left: 5px;
+    color: #fff;
+}
+#mLevelCont {
+    display: block;
+    background-color: transparent;
+    position: fixed;
+    left: 115px;
+    top: 64px;
+}
+#mLevelContV {
+    font-size: 17px;
+}
+#mLevelContV::before {
+    content: 'Lv';
+    margin-right: 2px;
+}
+.progressBar {
+    height: 12px;
+    border-radius: 8px !important;
+    border: 1px solid #fff;
+    background-color: #303030;
+    position: fixed;
+    width: 320px;
+    left: 210px;
+    top: 100px
+}
+.progressBarInner {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-image: none;
+    background-color: #dca930 !important;
+}
+#mailContainer {
+    position: fixed;
+    left: 6px;
+    top: 130px;
+}
+/*Spec*/
+#spectButton span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
+  display: block !important;
+}
+#instructions {
+  font-size: 0;
+  animation: none;
+}
+#spectButton {
+   position: fixed;
+   top: 20px !important;
+}
+/*Sublogo*/
+#subLogoButtons {
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    margin: 0 !important;
+    position: fixed;
+    left: 0;
+    right: unset;
+    top: unset;
+    bottom: 0;
+    transform: none;
+    height: 160px;
+}
+.button.small {
+    background-color: #17316f;
+    border: 2px solid #fff !important;
+    width: 100px;
+    padding: 0 25px 0 25px !important;
+}
+.button.small.buttonP {
+    position: fixed;
+    left: 5px;
+    bottom: 0;
+}
+.button.small.buttonR {
+    position: fixed;
+    left: 165px;
+    bottom: 0;    
+}
+.button.small.buttonO {
+    position: fixed;
+    left: 325px;
+    bottom: 0;    
+}
+#inviteButton {
+    position: fixed;
+    right: 165px;
+    bottom: 0;
+}
+#menuBtnJoin {
+    position: fixed;
+    right: 5px;
+    bottom: 0;
+}
+/*Chat*/
+#uiBase.onMenu #chatHolder {
+    left: unset;
+    right: 335px;
+    bottom: 0px !important;
+    z-index: 21;
+    background-color: transparent;
+}
+#chatInputHolder {
+    background-color: transparent;
+}
+#chatInput {
+  font-size: 0px;
+  padding: 0 8px;
+  border: none;
+  border-bottom: 0px solid transparent;
+  border-radius: 0;
+  background-color: transparent;
+  margin: 0;
+  width: -webkit-fill-available;
+  transition-duration: 0.25s;
+}
+#chatInput::placeholder {
+  color: transparent;
+  font-size: 0;
+}
+#chatInput:focus {
+  font-size: 24px;
+  border: 4px solid #fff;
+  margin-top: 8px;
+  background-color: var(--border);
+  border-radius: 20px;
+}
+#chatSwitchHolder {
+  position: absolute;
+  right: calc(100% + 12px);
+  bottom: 0;
+}
+#chatSwitch {
+  font-size: 36px;
+  color: transparent;
+  transition-duration: 0.25s;
+}
+#chatHolder:hover #chatSwitch {
+  color: #fff;
+}
+/*Customize*/
+#customizeButton .material-icons:before {
+  content: url(https://cdn.discordapp.com/attachments/925735566727868476/958013849590706176/image_10.png);
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  z-index: -1;
+  transition: 0.4s;
+  transform: translate(-42%, 50%) rotate(-10deg) scale(1);
+}
+#bubbleContainer {
+  display: none !important;
+  z-index: 100;
+}
+#menuClassContainer {
+  display: block;
+  position: fixed;
+  top: unset;
+  bottom: unset;
+  transform: unset;
+  z-index: 100 !important;
+}
+#customizeButton {
+  position: fixed;
+  bottom: 0;
+  left: 80px;
+  z-index: 100;
+  display: block;
+  top: unset;
+  width: 250px;
+  height: 240px;
+  border: unset !important;
+  background: transparent;
+  border-top-right-radius: 100px;
+  font-size: 0 !important;
+}
+#customizeButton .material-icons {
+  font-size: 0 !important;
+}
+#customizeButton:hover {
+  transform: unset;
+}
+#customizeButton:hover > .material-icons:before {
+  transform: translate(-42%, 50%) scale(1.1); 
+  transition: 0.6s;
+  filter: drop-shadow(0 0 20px var(--border-color));
+}
+#menuClassName,
+#menuClassSubtext,
+#menuClassNameTag,
+#classPreviewCanvas {
+  display: none !important;
+}
+#policeButton {
+  position: fixed;
+  right: 0px;
+  bottom: 50px;
+  transform: scale(0.8);
+}
+.buttonB {
+  border-color: #fff !important;
+  background-color: #fff;
+}
+/*Windows*/
+#windowHolder[style="display: none;"] {
+  display: block !important;
+  background: transparent;
+  transform: scale(0);
+  transition: 0.4s cubic-bezier(0.88, -0.98, 0.88, 0.88);
+}
+#windowHolder[style="display: block;"] {
+  background: transparent;
+  transform: scale(1);
+  transition: 0.4s cubic-bezier(0.01, 0.01, 0.38, 0.38);
+}
+#menuWindow.dark {
+  background-color: rgba(0,0,0,.6);
+  border-radius: 0 !important;
+}
+
+
+
+
+
+#maxHP {
+    display: none;
+}
+
+.healthBarSeg {
+    margin: 0px -5px;
+    border-radius: 0;
+    background-color: transparent;
+    width: -webkit-fill-available;
+}
+
+.hpBSeg {
+    border-radius: 1px;
+    box-shadow: none;
+}
+
+/*When cpol's osu scorebar goes brr*/
+#healthBar {
+    position: fixed;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2%;
+    width: 250px;
+    height: 30px;
+}
+
+#healthBar::after {
+    content: var(--cpolbarver);
+    position: fixed;
+    border-radius: 0px;
+    top: 5%;
+    right: unset;
+    left: 50%;
+    bottom: unset;
+    transform: translateX(-50%) scale(2.2);
+    filter: drop-shadow(0px 3px 1px var(--accent));
+}
+#hudClassIcon {
+    display: flex;
+    background-color: transparent;
+    width: 110px;
+    height: 110px;
+    position: fixed;
+    top: 3%;
+    right: unset;
+    bottom: unset;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hudClassIcon::after {
+    font-family: "when the cpol font goes brrr";
+    content: var(--ign);
+    background-color: transparent;
+    width: 600px; 
+    height: 30px;
+    position: fixed;
+    top: 145px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: unset;
+    right: unset;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    align-content: center;
+    text-shadow: 0 0 5px #fff;
+}
+
+/*time and score of cpol in krunker be like:*/
+#myScoreVal {
+    font-family: "when the cpol font goes brrr";
+    color: white !important;
+    font-size: 36px;
+    justify-content: center;
+    position: fixed;
+    right: 37%;
+    top: 10%;
+    left: unset;
+    bottom: unset;
+    text-align: center;
+    align-content: center;  
+    text-shadow: 0 0 3px #fff;
+}
+
+#timerDisplay {
+    font-family: "when the cpol font goes brrr";
+    text-align: center;
+    position: fixed;
+    justify-content: center;
+    top: 9%;
+    left: 36%;
+    right: unset;
+    bottom: unset;
+    text-align: center;
+    font-size: 44px;
+    background-color: transparent;
+    align-content: center;  
+    text-shadow: 0 0 3px #fff;
+}
+
+#timerVal {
+    text-align: center;
+    font-family: "when the cpol font goes brrr";
+    align-content: center;
+    text-shadow: 0 0 3px #fff;
+}
+#timerIcon {
+    display: none;
+}
+#leaderDisplay {
+    position: fixed;
+    text-align: center;
+    width: 250px;
+    z-index: 3;
+    left: 0%;
+    bottom: 30%;
+    color: rgba(255,255,255,.7);
+    font-size: 30px;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+#healthValueHolder{
+    background-color: transparent;
+}
+#ammoDisplay {
+    position: fixed;
+    width: 100px;
+    height: 65px;
+    right: 1%;
+    bottom: 35%;
+    background-color: transparent;
+    filter: drop-shadow(0px 2px 1px var(--accent));
+}
+#ammoval{
+    font-size: 45px;
+    filter: drop-shadow(0px 2px 1px var(--accent));
+}
+
+#ammoIcon {
+    display: none;
+}
+
+#weapDisplay {
+    position: fixed;
+    bottom: 30%;
+    right: 0%;
+    filter: drop-shadow(0px 2px 1px var(--accent));
+}
+
+.weapIcon {
+    filter: drop-shadow(0px 2px 1px var(--accent));
+    height: 0;
+    width: 160px;
+    position: fixed;
+    bottom: 30%;
+    right: 0%;
+}
+
+.weapKey {
+    display: none !important;
+}
+
+#ammoMax {
+    display: none !important;
+}
+
+#gameMessage {
+    font-family: "when the cpol font goes brrr";
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: unset;
+    bottom: 10px;
+    color: #fff;
+    z-index: 10;
+    font-size: 30px;
+}
+
 
