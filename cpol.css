@@ -1,1 +1,42 @@
+@import url(https://oofabyy.github.io/zeena/zeena.css);
+/*DO NOT TOUCH*/
+/*css was originally made by zeena, fixed and upgraded Abyy#5333*/
+/*I reused some codes from yukiaim css by tae#4444 - abyy*/
 
+:root{
+    --cpolbar: var(--ver1light);
+    --song: "nekodex - circles";
+    /*Cpol heathbar versions. Values: ver1light and ver2 */
+
+    --ver1light: url(https://cdn.discordapp.com/attachments/837694478448984124/858575698398412830/CPOLHPBAR.png);
+   /*no dark, sorry*/
+    --ver2: url(https://cdn.discordapp.com/attachments/837694478448984124/858998038093365278/when_the_scorebar.png) /* Light mode only :(( */
+}
+/*Make edits below*/
+
+@font-face {
+    font-family: "cpol"; 
+    src: url(https://www.dl.dropboxusercontent.com/s/1cksf0rdiibtk53/Redshift-Regular.ttf?dl=0) format('truetype');
+}
+
+#scoreCount, 
+#timerVal,
+#timerDisplay,
+#fpsDisplay,
+#pingDisplay,
+#topLeftHolder,
+#streakCount,
+#deathCount,
+#killCount,
+#ammoVal,
+#healthValue,
+#healthValue::after,
+#ammoVal::before {
+    font-family: "cpol";
+    text-shadow: 0 0 3px #FFFFFF !important;
+}
+#scoreCount::after {
+    content: "Zeena";
+    font-family: "cpol";
+    text-shadow: 0 0 3px #FFFFFF !important;
+}
